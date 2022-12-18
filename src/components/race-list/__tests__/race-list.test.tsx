@@ -8,7 +8,7 @@ import RaceList from '../race-list'
 import { render } from '../../../utils/testing-library'
 
 // Fixtures
-import { mockedRaces } from './race-list.fixtures'
+import { mockedRaces } from '../../../fixtures/race-list.fixtures'
 
 describe('race-list', () => {
   it('Shows empty list text when no results', () => {

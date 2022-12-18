@@ -1,3 +1,4 @@
+// Types
 import { Race } from '../types/races.types'
 
 export type HorseRacesGetPayload = {
