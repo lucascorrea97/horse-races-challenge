@@ -29,3 +29,7 @@ This application simply shows a list of the 5 next-to-go horse races to the user
 
 - Run `yarn test`
 - Run `yarn test --coverage` then `cd coverage && open index.html` to visualise the coverage with more details on a web page
+
+## Development:
+
+- Please refer to [DEVELOPMENT.md](./documents/DEVELOPMENT.md).

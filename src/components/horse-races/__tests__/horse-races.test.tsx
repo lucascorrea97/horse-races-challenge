@@ -31,7 +31,6 @@ describe('horse-races', () => {
       mockRacingResponse.data.race_summaries[
         'e2f5d42a-6fb5-4884-bda2-6173ec86ea88'
       ]
-    console.log('firstRace', firstRace)
     const { getByText, queryByText } = render(
       <HorseRacesProvider>
         <HorseRacesLandingScreen />
