@@ -2,6 +2,7 @@
 import React from 'react'
 import {
   LayoutChangeEvent,
+  TouchableNativeFeedbackProps,
   TouchableOpacityProps,
   ViewStyle,
 } from 'react-native'
@@ -27,8 +28,10 @@ export interface TextBoxProps {
   onLayout?: (event: LayoutChangeEvent) => void
 }
 
-export interface ButtonBoxProps extends Omit<TouchableOpacityProps, 'style'> {
-  BaseComponent?: React.ComponentType<TouchableOpacityProps>
+type TouchableProps = TouchableOpacityProps | TouchableNativeFeedbackProps
+
+export interface ButtonBoxProps extends Omit<TouchableProps, 'style'> {
+  BaseComponent?: React.ComponentType<TouchableProps>
   children?: React.ReactNode
   type?: 'Button'
   /**

@@ -1,6 +1,10 @@
 // Libraries
 import React, { Children } from 'react'
-import { TouchableOpacity } from 'react-native'
+import {
+  Platform,
+  TouchableNativeFeedback,
+  TouchableOpacity,
+} from 'react-native'
 
 // Types
 import { ButtonOwnProps } from './button.types'
@@ -36,10 +40,13 @@ const Button = (props: ButtonOwnProps) => {
     return child
   })
 
+  const isAndroid = Platform.OS === 'android'
+  const BaseComponent = isAndroid ? TouchableNativeFeedback : TouchableOpacity
+
   return (
     <Box
       type="Button"
-      BaseComponent={TouchableOpacity}
+      BaseComponent={BaseComponent}
       onPress={onPress}
       {...styles.base}
       {...buttonStyles}>
